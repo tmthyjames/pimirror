@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Traffic layer</title>
+    <style>
+      body {
+      	background-color: black;
+      }
+      #map {
+      	left:70%;
+        height: 30%;
+        width: 30%;
+      }
+      #weather{
+      	position: absolute;
+      	height:30%;
+      }
+      #clock{
+      	position: absolute;
+      	left:0%;
+      	top:93%;
+      }
+      #newsfeed{
+      	position: absolute;
+      	left:70%;
+      	height:100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+  	<div id="weather">
+		<div class="booked-wzs-160-275_in"> <div class="booked-wzs-160-275-data"> <div class="booked-wzs-160-275-left-img wrz-06"></div> <div class="booked-wzs-160-275-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>70</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">F</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d"><span class="plus">+</span>70&deg;</div> <div class="booked-wzs-day-n"><span class="plus">+</span>62&deg;</div> </div> </div> <div class="booked-wzs-160-275-info"> <div class="booked-wzs-160-275-city">Nashville</div> <div class="booked-wzs-160-275-date">Friday, 06</div> </div> </div> </div> <a target="_blank" href="http://www.booked.net/weather/nashville-18219" class="booked-wzs-bottom-160-275" > <table cellpadding="0" cellspacing="0" class="booked-wzs-table-160"> <tr> <td class="week-day"> <span class="week-day-txt">Saturday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>85&deg;</td> <td class="week-day-val"><span class="plus">+</span>69&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Sunday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>76&deg;</td> <td class="week-day-val"><span class="plus">+</span>69&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Monday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>83&deg;</td> <td class="week-day-val"><span class="plus">+</span>57&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Tuesday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>84&deg;</td> <td class="week-day-val"><span class="plus">+</span>69&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Wednesday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>73&deg;</td> <td class="week-day-val"><span class="plus">+</span>58&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Thursday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-01"></div></td> <td class="week-day-val"><span class="plus">+</span>69&deg;</td> <td class="week-day-val"><span class="plus">+</span>50&deg;</td> </tr> </table> <div class="booked-wzs-center"> <span class="booked-wzs-bottom-l">See 7-Day Forecast</span> </div> </a> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-160x275.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-week-vertical-96822'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=18219&type=4&scode=124&ltid=3458&domid=w209&anc_id=35768&cmetric=0&wlangID=1&color=000000&wwidth=160&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+  	</div>
+    <div id="map"></div>
+    <div id="clock">
+		<iframe src="http://free.timeanddate.com/clock/i5xcpaoo/n171/fn7/fs42/fcfff/tct/pct/ftb/th2" frameborder="0" width="267" height="60" allowTransparency="true"></iframe>
+    </div>
+    <div id="newsfeed">
+    	<iframe src="https://feed.mikle.com/widget/v2/49223/"></iframe>
+    </div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 36.165618, lng: -86.595793}
+        });
+
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+      }
+    </script>
+    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDyvPP7pen14oC6WzG5PYPAYR6DiguMWQ&callback=initMap">
+    </script>
+  </body>
+</html>
