@@ -4,10 +4,16 @@
 
 small button on side for "find my iphone" feature... 
 
-put small trackpad on corner of mirror for controls (actually, justs use a remote qwerty style keyboard with built in track pad to make the frame simpler
+wireless qwerty keyboard with trackpad
 
 put speakers in top corners of mirror for playback options (podcasts, music, etc)
 
 put distance sensor in bottom of mirror to control compliments (every time you step back in front of the mirror, it pops a new compliment)
 
 mayyyybbeeee (pending wife's approval, she said no but i think it's thuper kewl): pull out keyboard for even more control.
+
+## dimensions:
+
+one-way glass: 34 3/4 X 19 1/2 inches ($120 at madison glass company)
+
+
