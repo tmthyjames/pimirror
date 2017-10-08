@@ -4,7 +4,7 @@
 
 small button on side for "find my iphone" feature... 
 
-put small trackpad on corner of mirror for controls
+put small trackpad on corner of mirror for controls (actually, justs use a remote qwerty style keyboard with built in track pad to make the frame simpler
 
 put speakers in top corners of mirror for playback options (podcasts, music, etc)
 
