@@ -2,6 +2,8 @@
 
 ## ideas for future version
 
+small button on side for "find my iphone" feature... 
+
 put small trackpad on corner of mirror for controls
 
 put speakers in top corners of mirror for playback options (podcasts, music, etc)
